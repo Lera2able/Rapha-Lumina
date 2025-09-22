@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rapha Lumina – Awakening & Holistic Guides</title>
+  <meta name="description" content="Rapha Lumina offers personalised awakening reports and holistic ADHD tools. Explore numerology, astrology, chakra alignment, shadow work, and gentle practices for mental wellness." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cosmicIndigo: "#1A1A40",   // deep indigo
+            mysticFuchsia: "#C084FC",  // bright fuchsia
+            aquariusAqua: "#38E0DC",   // aqua highlight
+            goldenLight: "#FDE68A",    // soft golden yellow
+            softWhite: "#F8FAFC",      // near-white text
+            saleRed: "#EF4444"         // red for strikethroughs
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glow { box-shadow: 0 0 24px rgba(192, 132, 252, 0.35); }
+    .star-bg { background-image: radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.4), rgba(255,255,255,0)), radial-gradient(2px 2px at 80px 120px, rgba(255,255,255,0.35), rgba(255,255,255,0)), radial-gradient(1.5px 1.5px at 160px 60px, rgba(255,255,255,0.35), rgba(255,255,255,0)); background-size: 200px 200px; }
+
+    /* Modern button styles with animated glow and bounce */
+    .btn-primary {
+      @apply px-7 py-4 rounded-xl font-medium text-cosmicIndigo bg-gradient-to-r from-aquariusAqua to-mysticFuchsia transition duration-300 ease-out relative text-lg;
+      animation: pulseGlow 3s infinite;
+    }
+    .btn-primary:hover {
+      @apply from-goldenLight to-aquariusAqua shadow-xl scale-110;
+      animation: bounce 0.6s;
+    }
+    .btn-outline {
+      @apply px-7 py-4 rounded-xl border border-white/15 text-softWhite text-lg transition duration-300 ease-out;
+    }
+    .btn-outline:hover {
+      @apply border-aquariusAqua text-aquariusAqua scale-110;
+      animation: bounce 0.6s;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 10px rgba(192, 132, 252, 0.4), 0 0 20px rgba(56, 224, 220, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(192, 132, 252, 0.6), 0 0 40px rgba(56, 224, 220, 0.5);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      30% { transform: translateY(-5px); }
+      60% { transform: translateY(2px); }
+    }
+  </style>
+  <link rel="icon" href="/favicon.png" />
+</head>
+<body class="bg-cosmicIndigo text-softWhite">
+  <!-- Header -->
+  <header class="border-b border-white/10 sticky top-0 backdrop-blur bg-cosmicIndigo/90 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <img src="logo.png" alt="Rapha Lumina logo" class="h-9 w-9 rounded-full object-contain" />
+        <span class="font-semibold tracking-wide">Rapha Lumina</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#offers" class="hover:text-aquariusAqua">Services</a>
+        <a href="#freebie" class="hover:text-aquariusAqua">Free Guide</a>
+        <a href="#how" class="hover:text-aquariusAqua">How it works</a>
+        <a href="#faq" class="hover:text-aquariusAqua">FAQ</a>
+        <a href="#contact" class="hover:text-aquariusAqua">Contact</a>
+      </nav>
+      <a href="#freebie" class="hidden md:inline-block btn-primary">Get the free guide</a>
+      <button id="menuBtn" class="md:hidden inline-flex items-center px-3 py-2 rounded-lg border border-white/20">Menu</button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-cosmicIndigo/95">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-3 text-sm">
+        <a href="#offers" class="hover:text-aquariusAqua">Services</a>
+        <a href="#freebie" class="hover:text-aquariusAqua">Free Guide</a>
+        <a href="#how" class="hover:text-aquariusAqua">How it works</a>
+        <a href="#faq" class="hover:text-aquariusAqua">FAQ</a>
+        <a href="#contact" class="hover:text-aquariusAqua">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="star-bg">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-semibold leading-tight">
+          Awakening & Holistic ADHD Guidance
+        </h1>
+        <p class="mt-4 text-softWhite/80">
+          At Rapha Lumina we create personalised guides to help you reconnect with Source, align with the Age of Aquarius, and approach mental health holistically. Our resources blend spiritual wisdom with practical steps — gentle, supportive, and designed to help you grow.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#offers" class="btn-primary">Explore services</a>
+          <a href="#freebie" class="btn-outline">Get a free guide</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-cosmicIndigo/50 via-mysticFuchsia/30 to-aquariusAqua/30 glow"></div>
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div class="text-center">
+            <p class="text-sm uppercase tracking-widest text-softWhite/70">Preview</p>
+            <p class="text-base md:text-lg text-softWhite">Each guide is delivered as a beautiful, easy-to-read PDF</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services (buttons updated) -->
+  <!-- ... rest of the code stays unchanged ... -->
+</body>
+</html>
