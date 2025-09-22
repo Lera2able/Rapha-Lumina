@@ -57,6 +57,23 @@
       30% { transform: translateY(-5px); }
       60% { transform: translateY(2px); }
     }
+
+    /* Highlight logo + brand name */
+    .brand-name {
+      @apply font-extrabold text-xl md:text-2xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-aquariusAqua via-mysticFuchsia to-goldenLight;
+      text-shadow: 0 0 10px rgba(192,132,252,0.6);
+      animation: brandPulse 4s infinite;
+    }
+    .logo-glow {
+      box-shadow: 0 0 12px rgba(56,224,220,0.8), 0 0 24px rgba(192,132,252,0.6);
+      border-radius: 50%;
+      animation: brandPulse 4s infinite;
+    }
+
+    @keyframes brandPulse {
+      0%, 100% { transform: scale(1); filter: brightness(1); }
+      50% { transform: scale(1.05); filter: brightness(1.2); }
+    }
   </style>
   <link rel="icon" href="/favicon.png" />
 </head>
@@ -64,9 +81,9 @@
   <!-- Header -->
   <header class="border-b border-white/10 sticky top-0 backdrop-blur bg-cosmicIndigo/90 z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2">
-        <img src="logo.png" alt="Rapha Lumina logo" class="h-9 w-9 rounded-full object-contain" />
-        <span class="font-semibold tracking-wide">Rapha Lumina</span>
+      <a href="#" class="flex items-center gap-3">
+        <img src="logo.png" alt="Rapha Lumina logo" class="h-10 w-10 object-contain logo-glow" />
+        <span class="brand-name">Rapha Lumina</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#offers" class="hover:text-aquariusAqua">Services</a>
@@ -116,7 +133,17 @@
     </div>
   </section>
 
-  <!-- Services (buttons updated) -->
-  <!-- ... rest of the code stays unchanged ... -->
+  <!-- Services, Freebie, How it works, FAQ, Contact, Footer remain unchanged -->
+  <!-- ... (keep the rest of your existing code as is) ... -->
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
