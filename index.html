@@ -58,21 +58,20 @@
       60% { transform: translateY(2px); }
     }
 
-    /* Highlight logo + brand name */
+    /* Highlight logo + brand name (bigger + pulse) */
     .brand-name {
-      @apply font-extrabold text-xl md:text-2xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-aquariusAqua via-mysticFuchsia to-goldenLight;
-      text-shadow: 0 0 10px rgba(192,132,252,0.6);
+      @apply font-extrabold text-2xl md:text-3xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-aquariusAqua via-mysticFuchsia to-goldenLight;
+      text-shadow: 0 0 12px rgba(192,132,252,0.65);
       animation: brandPulse 4s infinite;
     }
     .logo-glow {
-      box-shadow: 0 0 12px rgba(56,224,220,0.8), 0 0 24px rgba(192,132,252,0.6);
+      box-shadow: 0 0 16px rgba(56,224,220,0.85), 0 0 28px rgba(192,132,252,0.65);
       border-radius: 50%;
       animation: brandPulse 4s infinite;
     }
-
     @keyframes brandPulse {
       0%, 100% { transform: scale(1); filter: brightness(1); }
-      50% { transform: scale(1.05); filter: brightness(1.2); }
+      50% { transform: scale(1.06); filter: brightness(1.18); }
     }
   </style>
   <link rel="icon" href="/favicon.png" />
@@ -81,8 +80,8 @@
   <!-- Header -->
   <header class="border-b border-white/10 sticky top-0 backdrop-blur bg-cosmicIndigo/90 z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <img src="logo.png" alt="Rapha Lumina logo" class="h-10 w-10 object-contain logo-glow" />
+      <a href="#" class="flex items-center gap-4">
+        <img src="logo.png" alt="Rapha Lumina logo" class="h-14 w-14 object-contain logo-glow" />
         <span class="brand-name">Rapha Lumina</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
@@ -133,8 +132,171 @@
     </div>
   </section>
 
-  <!-- Services, Freebie, How it works, FAQ, Contact, Footer remain unchanged -->
-  <!-- ... (keep the rest of your existing code as is) ... -->
+  <!-- Services -->
+  <section id="offers" class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold">Services</h2>
+      <p class="mt-2 text-softWhite/80">Choose a starting point. Limited-time launch discounts available now.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <!-- Numerology -->
+        <div class="p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+          <h3 class="text-xl font-semibold text-mysticFuchsia">Numerology Awakening Report</h3>
+          <p class="mt-2 text-sm text-softWhite/80">Life Path, Destiny, Soul and Personal Year with simple practices. 12–15 pages.</p>
+          <ul class="mt-3 text-sm list-disc list-inside text-softWhite/70">
+            <li>Personalised insights</li>
+            <li>Practical steps</li>
+            <li>48 hour delivery</li>
+          </ul>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="text-sm line-through text-saleRed mr-2">$22</span>
+            <span class="text-lg font-semibold text-goldenLight">Now $7</span>
+            <a href="https://gumroad.com/your-numerology" target="_blank" class="ml-3 btn-primary">Order</a>
+          </div>
+          <p class="mt-2 text-xs text-saleRed">Limited time only – act now or you’ll miss out!</p>
+        </div>
+        <!-- Bundle -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-mysticFuchsia/20 to-aquariusAqua/20 border border-white/10">
+          <h3 class="text-xl font-semibold text-mysticFuchsia">Awakening Bundle</h3>
+          <p class="mt-2 text-sm text-softWhite">Numerology + Mini Astrology + Chakra Alignment Guide. 40+ pages.</p>
+          <ul class="mt-3 text-sm list-disc list-inside text-softWhite/70">
+            <li>Holistic view</li>
+            <li>Gentle, actionable tools</li>
+            <li>Great value</li>
+          </ul>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="text-sm line-through text-saleRed mr-2">$55</span>
+            <span class="text-lg font-semibold text-goldenLight">Now $10</span>
+            <a href="https://gumroad.com/your-bundle" target="_blank" class="ml-3 btn-primary">Order</a>
+          </div>
+          <p class="mt-2 text-xs text-saleRed">Special launch price – limited time only!</p>
+        </div>
+        <!-- ADHD Toolkit -->
+        <div class="p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+          <h3 class="text-xl font-semibold text-mysticFuchsia">ADHD Awakening Toolkit</h3>
+          <p class="mt-2 text-sm text-softWhite/80">Reframe ADHD as sensitivity and creative power. Daily rituals, prompts, planning pages. 20 pages.</p>
+          <ul class="mt-3 text-sm list-disc list-inside text-softWhite/70">
+            <li>Focus rituals</li>
+            <li>Grounding prompts</li>
+            <li>Non-medical, holistic</li>
+          </ul>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="text-sm line-through text-saleRed mr-2">$22</span>
+            <span class="text-lg font-semibold text-goldenLight">Now $8</span>
+            <a href="https://gumroad.com/your-adhd" target="_blank" class="ml-3 btn-primary">Order</a>
+          </div>
+          <p class="mt-2 text-xs text-saleRed">Introductory offer – grab it while it lasts!</p>
+        </div>
+      </div>
+
+      <!-- Trust row -->
+      <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-6 text-sm text-softWhite/80">
+        <div class="flex items-center gap-2"><span class="text-goldenLight">✔</span> Secure checkout</div>
+        <div class="flex items-center gap-2"><span class="text-goldenLight">✔</span> Instant access</div>
+        <div class="flex items-center gap-2"><span class="text-goldenLight">✔</span> Email support</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Freebie -->
+  <section id="freebie" class="border-t border-white/10 bg-cosmicIndigo/80">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold text-mysticFuchsia">Free guide</h2>
+      <p class="mt-2 text-softWhite/80">Choose one. You’ll get a link in your inbox.</p>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+          <h3 class="text-xl font-semibold text-mysticFuchsia">5 Signs You’re Awakening in the Age of Aquarius</h3>
+          <p class="mt-2 text-sm text-softWhite/80">A short, uplifting primer with simple integration tips.</p>
+          <a href="https://gumroad.com/free-aquarius" target="_blank" class="mt-3 inline-block btn-primary">Download for free</a>
+        </div>
+        <div class="p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+          <h3 class="text-xl font-semibold text-mysticFuchsia">5 ADHD Superpowers You Didn’t Know You Had</h3>
+          <p class="mt-2 text-sm text-softWhite/80">Gentle reframes and daily practices for focus and calm.</p>
+          <a href="https://gumroad.com/free-adhd" target="_blank" class="mt-3 inline-block btn-primary">Download for free</a>
+        </div>
+      </div>
+
+      <div class="mt-12 p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+        <h3 class="text-xl font-semibold text-mysticFuchsia">Stay connected</h3>
+        <p class="mt-2 text-sm text-softWhite/80">Join the Rapha Lumina list for updates, reflections and gentle practices. Delivered occasionally, never spammy.</p>
+        <!-- Replace with your MailerLite embed code if you have it -->
+        <form class="mt-4 flex flex-col sm:flex-row gap-3" action="#" method="post">
+          <input type="email" placeholder="Your email" required class="flex-1 px-4 py-3 rounded-xl bg-cosmicIndigo/40 border border-white/10 placeholder-softWhite/50" />
+          <button class="btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold">How it works</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+          <p class="text-4xl text-goldenLight">1</p>
+          <h3 class="mt-2 font-semibold text-mysticFuchsia">Choose a service</h3>
+          <p class="mt-2 text-sm text-softWhite/80">Pick a report or toolkit that suits your current chapter.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+          <p class="text-4xl text-goldenLight">2</p>
+          <h3 class="mt-2 font-semibold text-mysticFuchsia">Share details</h3>
+          <p class="mt-2 text-sm text-softWhite/80">Complete a simple form. Birth info is optional for astrology.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+          <p class="text-4xl text-goldenLight">3</p>
+          <h3 class="mt-2 font-semibold text-mysticFuchsia">Receive your guide</h3>
+          <p class="mt-2 text-sm text-softWhite/80">Your PDF arrives by email within 48 hours. Clear and gentle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="border-t border-white/10 bg-cosmicIndigo/80">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold text-mysticFuchsia">FAQ</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6 text-softWhite/90">
+        <div class="p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+          <h3 class="font-semibold text-mysticFuchsia">Is this religious?</h3>
+          <p class="mt-2 text-sm text-softWhite/80">No. Rapha Lumina is spiritual and practical. No dogma. No fear.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+          <h3 class="font-semibold text-mysticFuchsia">Is ADHD medical advice?</h3>
+          <p class="mt-2 text-sm text-softWhite/80">This is a holistic, educational perspective. It does not replace professional care.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+          <h3 class="font-semibold text-mysticFuchsia">Do you offer refunds?</h3>
+          <p class="mt-2 text-sm text-softWhite/80">Digital products are non-refundable. If there is an issue with your file, I’ll fix it fast.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-cosmicIndigo/60 border border-white/10">
+          <h3 class="font-semibold text-mysticFuchsia">How are guides created?</h3>
+          <p class="mt-2 text-sm text-softWhite/80">I combine structured templates, AI assistance, and lived experience to create a clear, personalised PDF.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="border-t border-white/10 bg-cosmicIndigo">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold text-mysticFuchsia">Contact</h2>
+      <p class="mt-2 text-softWhite/80">Have a question or a custom request? I’ll reply soon.</p>
+      <form id="contactForm" action="https://formspree.io/f/your-id" method="POST" class="mt-6 grid md:grid-cols-2 gap-4">
+        <input required name="name" placeholder="Your name" class="px-4 py-3 rounded-xl bg-cosmicIndigo/40 border border-white/10 placeholder-softWhite/50" />
+        <input required name="email" type="email" placeholder="Email address" class="px-4 py-3 rounded-xl bg-cosmicIndigo/40 border border-white/10 placeholder-softWhite/50" />
+        <textarea required name="message" placeholder="Your message" rows="4" class="md:col-span-2 px-4 py-3 rounded-xl bg-cosmicIndigo/40 border border-white/10 placeholder-softWhite/50"></textarea>
+        <button class="md:col-span-2 btn-primary">Send</button>
+        <p id="formMsg" class="md:col-span-2 text-sm text-goldenLight hidden">Thank you. Your message has been sent.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-8 text-center text-xs text-softWhite/70">
+    <div class="max-w-6xl mx-auto px-4">© <span id="year"></span> Rapha Lumina • Awakening & Holistic Guides</div>
+  </footer>
 
   <script>
     // Mobile menu toggle
@@ -143,7 +305,8 @@
     menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
     // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
